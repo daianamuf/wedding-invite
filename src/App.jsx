@@ -220,7 +220,7 @@ function App() {
         </div>
 
         <div className="form-group">
-          <label>Ai nevoie de cazare?</label>
+          <label>Aveți nevoie de cazare?</label>
           <div className="radio-group">
             <label className="radio-group__label">
               <input
