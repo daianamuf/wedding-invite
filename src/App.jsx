@@ -169,9 +169,7 @@ function App() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="persoane">
-            Câte persoane vor veni alături de tine?
-          </label>
+          <label htmlFor="persoane">Câte persoane veți participa?</label>
           <input
             className="form-group__input"
             type="text"
