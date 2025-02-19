@@ -17,7 +17,7 @@ async function updateGoogleSheet(authClient, data) {
   const sheetsService = google.sheets({ version: "v4", auth: authClient });
   const values = [
     [
-      data.name,
+      data.nume,
       data.confirmare,
       data.persoane,
       data.meniu,
