@@ -1,5 +1,4 @@
 const { google } = require("googleapis");
-const { Readable } = require("stream");
 
 const credential = JSON.parse(
   Buffer.from(
@@ -11,10 +10,7 @@ const credential = JSON.parse(
 const { GoogleAuth } = require("google-auth-library");
 const auth = new GoogleAuth({
   credentials: credential,
-  scopes: [
-    "https://www.googleapis.com/auth/drive",
-    "https://www.googleapis.com/auth/spreadsheets",
-  ],
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
 async function updateGoogleSheet(authClient, data) {

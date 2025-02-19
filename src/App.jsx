@@ -89,7 +89,28 @@ function App() {
     }
   };
 
-  const setForm = async (submissionData) => {};
+  const setForm = async (submissionData) => {
+    try {
+      const response = await fetch("/.netlify/functions/formHandler", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      if (response.ok) {
+        setSubmissionMessage("Formular trimis cu succes!");
+      } else {
+        setSubmissionMessage(
+          "Eroare de server. Vă rugăm incercați mai tarziu!"
+        );
+      }
+    } catch (error) {
+      console.error(error);
+      setSubmissionMessage("Eroare de server. Vă rugăm incercați mai tarziu!");
+    }
+  };
 
   return (
     <main>
