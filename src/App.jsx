@@ -127,6 +127,7 @@ function App() {
             placeholder="...."
             value={state.inputs.nume}
             onChange={handleChange}
+            required
           />
           {state.errors.name && (
             <span className="error-message">{state.errors.name}</span>
@@ -144,6 +145,7 @@ function App() {
                 value="DA"
                 checked={state.inputs.confirmare === "DA"}
                 onChange={handleChange}
+                required
               />
               DA
             </label>
@@ -156,6 +158,7 @@ function App() {
                 value="NU"
                 checked={state.inputs.confirmare === "NU"}
                 onChange={handleChange}
+                required
               />
               NU
             </label>
@@ -177,6 +180,7 @@ function App() {
             placeholder="...."
             value={state.inputs.persoane}
             onChange={handleChange}
+            required
           />
           {state.errors.persoane && (
             <span className="error-message">{state.errors.persoane}</span>
@@ -194,6 +198,7 @@ function App() {
                 value="Vegetarian"
                 checked={state.inputs.meniu === "Vegetarian"}
                 onChange={handleChange}
+                required
               />
               Meniu vegetarian
             </label>
@@ -206,6 +211,7 @@ function App() {
                 value="Standard"
                 checked={state.inputs.meniu === "Standard"}
                 onChange={handleChange}
+                required
               />
               Meniu standard
             </label>
@@ -226,6 +232,7 @@ function App() {
                 value="DA"
                 checked={state.inputs.cazare === "DA"}
                 onChange={handleChange}
+                required
               />
               DA
             </label>
@@ -238,6 +245,7 @@ function App() {
                 value="NU"
                 checked={state.inputs.cazare === "NU"}
                 onChange={handleChange}
+                required
               />
               NU
             </label>
